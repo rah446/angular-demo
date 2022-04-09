@@ -1,0 +1,41 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="row mb-3" *ngIf="currentRoute === '/search/users'">
+    <div class="col-6">
+      <h5 class="text-center"><a routerLink="/">Home Page</a></h5>
+    </div>
+    <div class="col-6">
+      <h5 class="text-center"><a routerLink="/history">Historical data</a></h5>
+    </div>
+  </div>
+  <div class="row mb-3" *ngIf="currentRoute === '/history'">
+    <div class="col-6">
+      <h5 class="text-center"><a routerLink="/">Home Page</a></h5>
+    </div>
+    <div class="col-6">
+      <h5 class="text-center"><a routerLink="/search/users">Search data</a></h5>
+    </div>
+  </div>
+  <div *ngIf="currentRoute === '/'">
+    <div class="background-color">
+      <h3 class="text-center my-5">Search Portal for Coding Bees Software Solutions Pvt Ltd</h3>
+      <div class="row">
+        <div class="col-7">
+          <h4 class="mb-5">Description</h4>
+          <h5 class="mb-5">Click here to search for users</h5>
+          <h5 class="mb-5">Click here to see history of past searches</h5>
+        </div>
+        <div class="col-5">
+          <h4 class="mb-5">Action</h4>
+          <h5 class="mb-5"><a routerLink="/search/users">Search</a></h5>
+          <h5 class="mb-5"><a routerLink="/history">Historical data</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- <app-search></app-search> -->
+
+<router-outlet></router-outlet>
